@@ -13,9 +13,9 @@ class Formatter {
 
     const words = string.split(" ")
     words.forEach((word) => {
-      exceptions.includes(word) ? newStringArr.push(word) : newStringArr.push(Formatter.capitalize(word));
+      exceptions.includes(word) ? newStringArr.push(word) : newStringArr.push(this.capitalize(word));
     });
-    newStringArr[0] = Formatter.capitalize(newStringArr[0]);
+    newStringArr[0] = this.capitalize(newStringArr[0]);
     return newStringArr.join(" ");
   }
 }
