@@ -9,16 +9,21 @@ class Formatter {
   }
 
   static titleize(string){
+    let newArray = []
     let splitString = string.split(' ')
-    console.log(splitString)
     var i;
     for(i = 0; i < splitString.length; i++){
       if (splitString[i] === 'a' || 'the' || 'an' || 'but' || 'of' || 'and' || 'for' || 'at' || 'by' || 'from')
-        splitString[i].join(' ')
+        {
+          newArray.push(splitString[i])
+        }
         else {
-        splitString[i].capitalize
+        let capital = splitString.toUpperCase()
+        newArray.push(capital)
         }
       //return the word then join
+      return newArray.toString()
     }
   }
+
 }
