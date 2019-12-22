@@ -11,18 +11,23 @@ class Formatter {
   static titleize(string){
     let newArray = []
     let splitString = string.split(' ')
+
+    let firstWord = splitString[0]
+    newArray.push(firstWord.charAt(0).toUpperCase() + firstWord.slice(1))
+
+
     var i;
-    for(i = 0; i < splitString.length; i++){
-      if (splitString[i] === 'a' || 'the' || 'an' || 'but' || 'of' || 'and' || 'for' || 'at' || 'by' || 'from')
-        {
-          newArray.push(splitString[i])
-        }
+    for(i = 1; i < splitString.length; i++){
+       if (splitString[i] === 'a' || 'the' || 'an' || 'but' || 'of' || 'and' || 'for' || 'at' || 'by' || 'from')
+       {
+        newArray.push(splitString[i])
+      }
         else {
-        let capital = splitString.toUpperCase()
-        newArray.push(capital)
+        newArray.push(splitString[i].toUpperCase())
         }
       //return the word then join
-      return newArray.toString()
+        let takeAwayComma = newArray.slice(' ')
+      return takeAwayComma.toString()
     }
   }
 
