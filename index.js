@@ -14,7 +14,7 @@ class Formatter {
       
     for (let element of stringArray) {
       if (arrayOfs.includes(element)) {
-      upperCaseArray.push(element)
+        upperCaseArray.push(element)
       } else {
         upperCaseArray.push(this.capitalize(element))
       }
