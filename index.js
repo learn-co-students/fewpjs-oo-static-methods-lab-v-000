@@ -16,12 +16,11 @@ class Formatter {
         if (arrayOfs.includes(element)) {
         upperCaseArray.push(element)
       } else {
-        upperCaseArray.push(element.charAt(0).toUpperCase() + element.slice(1))
+        upperCaseArray.push(this.capitalize(element))
       }
     }
     
-    string = upperCaseArray[0].charAt(0).toUpperCase() 
-    + upperCaseArray[0].slice(1) 
+    string = this.capitalize(upperCaseArray[0]) 
     + ' ' 
     + upperCaseArray.slice(1).join(' ')
   
