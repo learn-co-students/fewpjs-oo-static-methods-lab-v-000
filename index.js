@@ -12,9 +12,9 @@ class Formatter {
     const upperCaseArray = []
     const stringArray = string.split(' ')
       
-      for (let element of stringArray) {
-        if (arrayOfs.includes(element)) {
-        upperCaseArray.push(element)
+    for (let element of stringArray) {
+      if (arrayOfs.includes(element)) {
+      upperCaseArray.push(element)
       } else {
         upperCaseArray.push(this.capitalize(element))
       }
