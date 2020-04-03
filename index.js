@@ -12,7 +12,7 @@ class Formatter {
     const upperCaseArray = []
     const stringArray = string.split(' ')
       
-    for (let element of stringArray) {
+    for (const element of stringArray) {
       if (arrayOfs.includes(element)) {
         upperCaseArray.push(element)
       } else {
