@@ -10,7 +10,7 @@ class Formatter {
   static titleize(string) {
     const arrayOfs = ['the', 'a', 'an', 'but', 'of', 'and', 'at', 'by', 'from', 'for']
     const upperCaseArray = []
-    const stringArray = string.split(" ")
+    const stringArray = string.split(' ')
       
       for (let element of stringArray) {
         if (arrayOfs.includes(element)) {
