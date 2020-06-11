@@ -24,13 +24,14 @@ class Formatter {
 
     string1.split(" ").forEach(function(w) {
       // maybe i have to make sure it's picking up these words in a case insensitive way?
-        if (w == "the" || "a" || "an" || "but" || "of" || "and" || "for" || "at" || "by" || "from") {
+        if (w === string1.charAt(0) ) {
           // console.log("w", w)
           // console.log("titleize word", _titleizeWord(w))
+          result.push(_titleizeWord(w));
+        } else if (w === "the" || w === "a" || w === "an" || w === "but" || w === "of" || w === "and" || w === "for" || w === "at" || w === "by" || w === "from") {
           result.push(w);
         } else {
           result.push(_titleizeWord(w));
-
         }
     });
     return result.join(" ");
