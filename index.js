@@ -34,9 +34,9 @@ class Formatter {
 
       // Capitalize the first letter of each word of a given string
       for (let i = 0; i < splitSentence.length; i++) { 
-        splitSentence = splitSentence[i][0].toUpperCase() + splitSentence[i].substr(1);
+        capitalizeSentence = splitSentence[i][0].toUpperCase() + splitSentence[i].substr(1);
       }
-      // console.log("splitSentence",splitSentence)
+      console.log("capitalizeSentence",CapitalizeSentence)
       // splitSentence F
       // splitSentence E
       // splitSentence A
