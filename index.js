@@ -16,23 +16,33 @@ class Formatter {
     return sentence.replace( /[^A-Za-z0-9 '-]/g, '' )
   }
 
-  static titleize(sentence) {
+  static titleize(sentence, lower = false) {
     // console.log("sentence", sentence)
-    // sentence F forever foolish
     // sentence getting giggles
     let splitSentence = sentence.split(" ")
+    // console.log("splitSentence", splitSentence)
+    // splitSentence [ 'getting', 'giggles' ]
+    
     let modifiedSentence = []
-    // console.log("modifiedSentence", modifiedSentence)
-     // modifiedSentence [ 'getting', 'giggles' ]
+    let except =  "the, a, an, but, of, and, for, at, by, from"
+  
     // console.log("splitSentence[0].toUpperCase() + splitSentence.slice(1)", splitSentence[0].toUpperCase() + splitSentence.slice(1))
     // splitSentence[0].toUpperCase() + splitSentence.slice(1) GETTINGgiggles
     //  console.log("splitSentence[0][0].toUpperCase() + splitSentence.slice(1)", splitSentence[0][0].toUpperCase() + splitSentence.slice(1))
     //  splitSentence[0][0].toUpperCase() + splitSentence.slice(1) Ggiggles
-      
+    // (lower ? modifiedSentence.toLowerCase() : modifiedSentence).replace(/(?:^|\s|["'([{])+\S/g, match => match.toUpperCase());
 
+      // Capitalize the first letter of each word of a given string
       for (let i = 0; i < splitSentence.length; i++) { 
-        // modifiedSentence = 
+        splitSentence = splitSentence[i][0].toUpperCase() + splitSentence[i].substr(1);
       }
+      // console.log("splitSentence",splitSentence)
+      // splitSentence F
+      // splitSentence E
+      // splitSentence A
+
+      
         // return splitSentence
   } 
+  // console.log("splitSentence",splitSentence)
 }
