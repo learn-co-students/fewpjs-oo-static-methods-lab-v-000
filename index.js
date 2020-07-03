@@ -20,12 +20,12 @@ class Formatter {
     // console.log("sentence", sentence)
     // sentence F forever foolish
     // sentence getting giggles
-    let modifiedSentence = sentence.split(" ")
+    let splitSentence = sentence.split(" ")
     // console.log("modifiedSentence", modifiedSentence)
     // modifiedSentence [ 'F', 'forever', 'foolish' ]
     // modifiedSentence [ 'getting', 'giggles' ]
     // modifiedSentence [ 'a', 'tale', 'of', 'two', 'cities' ]
-    console.log("modifiedSentence.charAt(0).toUpperCase() + sentence.slice(1)", modifiedSentence.charAt(0).toUpperCase() + sentence.slice(1))
+    console.log("splitSentence.charAt(0).toUpperCase() + splitSentence.slice(1)", splitSentence.charAt(0).toUpperCase() + splitSentence.slice(1))
 
   } 
 }
