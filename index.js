@@ -21,11 +21,18 @@ class Formatter {
     // sentence F forever foolish
     // sentence getting giggles
     let splitSentence = sentence.split(" ")
+    let modifiedSentence = []
     // console.log("modifiedSentence", modifiedSentence)
-    // modifiedSentence [ 'F', 'forever', 'foolish' ]
-    // modifiedSentence [ 'getting', 'giggles' ]
-    // modifiedSentence [ 'a', 'tale', 'of', 'two', 'cities' ]
-    console.log("splitSentence.charAt(0).toUpperCase() + splitSentence.slice(1)", splitSentence.charAt(0).toUpperCase() + splitSentence.slice(1))
+     // modifiedSentence [ 'getting', 'giggles' ]
+    // console.log("splitSentence[0].toUpperCase() + splitSentence.slice(1)", splitSentence[0].toUpperCase() + splitSentence.slice(1))
+    // splitSentence[0].toUpperCase() + splitSentence.slice(1) GETTINGgiggles
+    //  console.log("splitSentence[0][0].toUpperCase() + splitSentence.slice(1)", splitSentence[0][0].toUpperCase() + splitSentence.slice(1))
+    //  splitSentence[0][0].toUpperCase() + splitSentence.slice(1) Ggiggles
+      
 
+      for (let i = 0; i < splitSentence.length; i++) { 
+        // modifiedSentence = 
+      }
+        // return splitSentence
   } 
 }
