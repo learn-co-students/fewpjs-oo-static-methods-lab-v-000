@@ -40,7 +40,7 @@ class Formatter {
       // splitSentence F
       // splitSentence E
       // splitSentence A
-      if splitSentence === this.titleize{
+      if (splitSentence === this.titleize) {
         return splitSentence
       } else {
           return this.titleize
