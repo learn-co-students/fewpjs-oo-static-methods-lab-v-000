@@ -1,17 +1,11 @@
 class Formatter {
-  //add static methods here
   // is a static method
   static capitalize(sentence) {
-    // console.log("sentence", sentence)
-    // sentence a
     // uppercases the first letter in a String
     return sentence.charAt(0).toUpperCase() + sentence.slice(1)
   }
   // is a static method
   static sanitize(sentence) {
-    // console.log("sentence", sentence)
-    // sanitize
-    // sentence C catching colds
     // removes non-alphanumeric characters except for dash, single quote and space
     return sentence.replace( /[^A-Za-z0-9 '-]/g, '' )
   }
@@ -22,31 +16,24 @@ class Formatter {
     let splitSentence = sentence.split(" ")
     // console.log("splitSentence", splitSentence)
     // splitSentence [ 'getting', 'giggles' ]
-    
     let modifiedSentence = []
-    let except =  "the, a, an, but, of, and, for, at, by, from"
-  
-    // console.log("splitSentence[0].toUpperCase() + splitSentence.slice(1)", splitSentence[0].toUpperCase() + splitSentence.slice(1))
-    // splitSentence[0].toUpperCase() + splitSentence.slice(1) GETTINGgiggles
-    //  console.log("splitSentence[0][0].toUpperCase() + splitSentence.slice(1)", splitSentence[0][0].toUpperCase() + splitSentence.slice(1))
-    //  splitSentence[0][0].toUpperCase() + splitSentence.slice(1) Ggiggles
-    // (lower ? modifiedSentence.toLowerCase() : modifiedSentence).replace(/(?:^|\s|["'([{])+\S/g, match => match.toUpperCase());
-
+    let except =  ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"]
       // Capitalize the first letter of each word of a given string
       for (let i = 0; i < splitSentence.length; i++) { 
-        splitSentence = splitSentence[i][0].toUpperCase() + splitSentence[i].substr(1);
-      }
-      // console.log("splitSentence",splitSentence)
-      // splitSentence F
-      // splitSentence E
-      // splitSentence A
-      if (splitSentence === this.titleize) {
-        return splitSentence
-      } else {
-          return this.titleize
-      }
-      
-        // return splitSentence
+        // always capitalizes the first word
+        if (i == 0) {
+          modifiedSentence.push(splitSentence[i][0].toUpperCase() + splitSentence[i].substr(1))
+        } else {
+          // if word in sentence is matched to except keep lower case
+          if (except.includes(splitSentence[i])) {
+            modifiedSentence.push(splitSentence[i])
+          } else {
+            // Capitalize first letter in word and adding it to that word
+            modifiedSentence.push(splitSentence[i][0].toUpperCase() + splitSentence[i].substr(1))
+          }
+        }
+     }
+     // return a sentence from the array
+     return modifiedSentence.join(" ")
   } 
-  // console.log("splitSentence",splitSentence)
 }
