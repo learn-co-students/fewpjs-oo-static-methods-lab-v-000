@@ -1,3 +1,9 @@
 class Formatter {
-  //add static methods here
+  constructor(string){
+    this.string = string;
+  }
+
+  static capitalize(string) {
+    return string.toUpperCase[0];
+  }
 }
