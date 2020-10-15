@@ -13,11 +13,12 @@ class Formatter {
   }
 
   static sanitize(string) {
-    return string.replace("[^A-Za-z0-9]", "");
+    return string.replace(/[^A-Za-z0-9 '-]/g, "");
   }
 
-  // static titleize(string) {
-  //   return string[0].toUpperCase() + string.slice(1);
-  // }
+  static titleize(string) {
+    // return string.split(' ').map(&:capitalize).join(' ');
+    // [0].toUpperCase() + string.slice(1);
+  }
 
 }
